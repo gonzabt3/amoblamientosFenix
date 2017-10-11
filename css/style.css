@@ -1,9 +1,10 @@
 /* código CSS */
-.logo {
+/*.logo {
    position: absolute;
-   left: 0;
-   right: 0;
-   top: 0;
+   left: auto;
+   right: auto;
+   top: auto;
+   top: -420%;
    margin: 0 auto;
    z-index: 9999999;
-}
+}*/
