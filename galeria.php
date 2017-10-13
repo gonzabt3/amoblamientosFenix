@@ -63,75 +63,35 @@ $images = array_diff(scandir($directorio), array('..', '.'));
         
         <div class="row">
              <?php
-            foreach ($images as $image){
-                if($image!="." || $image!=".."){
+            foreach ($images as $image){              
                     ?>   
                  <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria2/<?php echo $image?>">
-                    <img src="img/galeria2/<?php echo $image?>" alt="Park">
+                <a class="lightbox">
+                    <img id="<?php echo $image?>" alt="Trolltunga, Norway" class="" src="img/galeria2/<?php echo $image?>" onclick="abrirModal(id)">
                 </a>
             </div>
-                    
                    <?php 
-                }
-            }
-            
+                }         
             ?>
-            
-            
-            
-            
-<!--            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria2/18.png">
-                    <img src="img/galeria2/18.png" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/bridge.jpg">
-                    <img src="img/galeria/bridge.jpg" alt="Bridge">
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="img/galeria/tunnel.jpg">
-                    <img src="img/galeria/tunnel.jpg" alt="Tunnel">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/coast.jpg">
-                    <img src="img/galeria/coast.jpg" alt="Coast">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/rails.jpg">
-                    <img src="img/galeria/rails.jpg" alt="Rails">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/traffic.jpg">
-                    <img src="img/galeria/traffic.jpg" alt="Traffic">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/rocks.jpg">
-                    <img src="img/galeria/rocks.jpg" alt="Rocks">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/benches.jpg">
-                    <img src="img/galeria/benches.jpg" alt="Benches">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="img/galeria/sky.jpg">
-                    <img src="img/galeria/sky.jpg" alt="Sky">
-                </a>
-            </div>-->
         </div>
-
     </div>
-
 </div>
 
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+                                                                                                                                
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+    
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
     baguetteBox.run('.tz-gallery');
@@ -141,5 +101,6 @@ $images = array_diff(scandir($directorio), array('..', '.'));
     <!-- Bootstrap Core JavaScript -->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/creative.js" type="text/javascript"></script>
+<script src="js/galeria.js" type="text/javascript"></script>
 </body>
 </html>
