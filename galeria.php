@@ -67,7 +67,7 @@ $images = array_diff(scandir($directorio), array('..', '.'));
                     ?>   
                  <div class="col-sm-6 col-md-4">
                 <a class="lightbox">
-                    <img id="<?php echo $image?>" alt="Trolltunga, Norway" class="" src="img/galeria2/<?php echo $image?>" onclick="abrirModal(id)">
+                    <img id="<?php echo $image?>"  class="" src="img/galeria2/<?php echo $image?>" style="height: 250px" onclick="abrirModal(id)">
                 </a>
             </div>
                    <?php 
